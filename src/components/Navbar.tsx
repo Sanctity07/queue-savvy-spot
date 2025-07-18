@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X, User, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -25,15 +26,15 @@ const Navbar = ({ onAuthClick }: NavbarProps) => {
 
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <a href="#dashboard" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              <Link to="/" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Dashboard
-              </a>
-              <a href="#locations" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/locations" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 Locations
-              </a>
-              <a href="#how-it-works" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+              </Link>
+              <Link to="/how-it-works" className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                 How it Works
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -57,15 +58,15 @@ const Navbar = ({ onAuthClick }: NavbarProps) => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <a href="#dashboard" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium">
+              <Link to="/" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium">
                 Dashboard
-              </a>
-              <a href="#locations" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium">
+              </Link>
+              <Link to="/locations" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium">
                 Locations
-              </a>
-              <a href="#how-it-works" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium">
+              </Link>
+              <Link to="/how-it-works" className="block text-gray-700 hover:text-blue-600 px-3 py-2 text-base font-medium">
                 How it Works
-              </a>
+              </Link>
               <Button onClick={onAuthClick} className="w-full mt-2 bg-gradient-to-r from-blue-500 to-teal-500">
                 <User className="w-4 h-4 mr-2" />
                 Sign In
